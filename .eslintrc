@@ -1,0 +1,96 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": [
+    "codeceptjs2"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "Scenario": false,
+    "Feature": false,
+    "Before": false,
+    "After": false,
+    "BeforeSuite": false,
+    "AfterSuite": false,
+    "Data": false,
+    "Helper": false,
+    "recorder": false,
+    "actor": false,
+    "xScenario": false,
+    "DataTable": false,
+    "inject": false
+  },
+  "rules": {
+    "no-await-in-loop": "off",
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "info",
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "class-methods-use-this": "off",
+    "no-underscore-dangle": ["off", {
+      "allow": [],
+      "allowAfterThis": false,
+      "allowAfterSuper": false,
+      "enforceInMethodNames": false
+    }],
+    "max-len": [
+      "error",
+      220,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "new-cap": [
+      "error",
+      {
+        "capIsNewExceptions": [
+          "Scenario",
+          "Feature",
+          "Before",
+          "After",
+          "BeforeSuite",
+          "AfterSuite",
+          "Data",
+          "Merge"
+        ],
+        "newIsCap": true
+      }
+    ],
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "codeceptjs2/no-pause": 2,
+    "codeceptjs2/no-scenario-only": 2,
+    "codeceptjs2/no-data-only": 2,
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ]
+  }
+}

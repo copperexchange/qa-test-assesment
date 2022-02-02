@@ -1,0 +1,23 @@
+info:
+  name: tests-front-platform
+  version: "1.0"
+  category: tests
+
+conf:
+  gocd:
+    template: "serve-tests-tpl"
+
+build:
+  - docker-image:
+      tags: ["latest", "v{{ info.build-version }}"]
+
+test:
+  - integration:
+      command: |
+        docker run --rm \
+          -e ENV={{ vars.env }} \
+          -e POSTGRES_PASSWORD="${{ vars.env | upper }}_POSTGRES_PASSWORD" \
+          -e POSTGRES_HOST="postgres.{{ conf.env-domain }}" \
+          -v "${PWD}/tests-output":/src/tests-output \
+          -w /src \
+          {{ conf.docker.image }}
