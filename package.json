@@ -23,7 +23,7 @@
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-codeceptjs2": "^0.0.3",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.26.0",
     "image-decode": "^1.2.2",
     "jsqr": "^1.4.0",
     "npm": "^7.0.0",
