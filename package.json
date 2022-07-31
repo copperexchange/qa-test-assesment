@@ -27,7 +27,7 @@
     "image-decode": "^1.2.2",
     "jsqr": "^1.4.0",
     "npm": "^7.0.0",
-    "puppeteer": "^11.0.0",
+    "puppeteer": "^13.3.0",
     "speakeasy": "^2.0.0"
   }
 }
